@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+header{
+    width: 100%;
+    /*border: 2px solid;*/
+    padding-top: 1em;
+}
+button:hover{
+    cursor: pointer;
+}
+.head{
+    display: flex;
+    width: 100%;
+    /*border: 2px solid;*/
+    padding-top: 1em;
+}
+.logo_cont{
+    width: 87%;
+    margin-bottom: 0.5em;
+    margin-left: 3em;
+    z-index: 2;
+}
+.logo_cont img{
+    z-index: 2;
+}
+.showcase{
+    display: flex;
+    height: 91%;
+    background-image: url(nflix-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.showcase::after{
+    content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 91%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.45);
+	box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000; 
+}
+
+.container{
+    position: absolute;
+    left: 43%;
+    bottom: 20%;
+    z-index: 2;
+    width: 20%;
+    height: 60%;
+    background-color: #000000bf;
+}
+
+h2{
+    font-size: 1.6em;
+    color: white;
+    padding: 2.5em 2em;
+    padding-bottom: 1em;
+}
+li{
+    margin: auto;
+    width: 75%;
+    list-style: none;
+}
+li input{
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    color: #8c8c8c;
+    background-color: #333;
+    border: none;
+}
+li a{
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 2.5em;
+    background-color:red;
+    color: white;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+span{
+    color: #b3b3b3;
+    padding: 2.8em;
+}
+span a{
+    text-decoration: none;
+    color: white;
+}
+.footer .card_container{
+    margin-right: 0px;
+    width: 70%;
+    margin-left: 5em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    border-top: 8px solid rgb(39, 39, 39);
+    background-color: #000000;
+    justify-content: center;
+    padding: 4em 3.5em;
+}   
+.footer ,
+.footer a{
+    color: #999999;
+    font-size: 0.9rem;
+    background-color: #000000;
+    text-decoration: none;
+}
+
+.footer p{
+    width: 67%;
+    display: inline-block;
+    margin-bottom: 2em;
+    color: #757575;
+}
+
+.footer .footer-cols{
+    width: 67%;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 1.5em;
+}
+
+.footer li{
+    line-height: 2.4;
+    list-style: none;
+}
+.footer li a{
+    font-size: 0.8em;
+    color: #757575;
+}
+.footer li a:hover{
+    text-decoration: underline;
+}
+.end{
+    margin-top: 1em;
+}
+@media(max-width:450px){
+    .logo_cont img{
+        width: 30%;
+    }
+    .logo_cont{
+        width: 65%;
+        margin-left: 0.8em;
+    }
+    .container{
+        width: 300px;
+        left: 13%;
+    }
+    h2{
+        font-size: 1em;
+    }
+    .footer{
+        padding: 1em 1em;
+        left: 0;
+        height: 500px;
+        font-size: 0.7em;
+        justify-content: left;
+    }
+    .footer .card_container{
+        margin-left: 1em;
+        width: 100%;
+        justify-content: left;
+    }
+    .footer p{
+        width: 100%;
+    }
+    .footer .footer-cols{
+        width: 360px;
+        left: 0;
+    }
+    .showcase{
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .showcase::after{
+        box-shadow: inset 10px 0px 250px #000000, inset -10px -0px 250px #000000;
+    }
+}
